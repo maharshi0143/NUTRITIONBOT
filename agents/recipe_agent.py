@@ -20,9 +20,13 @@ class RecipeAgent:
 
         prompt = (
             "You are a recipe agent. Create 3 recipe ideas using the provided ingredients. "
-            "Respect the diet restriction. If an ingredient violates the diet, suggest a swap. "
-            "Return strict JSON with keys: recipes (array of objects with name, time_minutes, "
-            "ingredients, steps, swaps), shopping_list (array of strings), and tips (array of strings)."
+            "Respect the diet restriction exactly. Do not change the diet (for example, do not "
+            "switch to vegan unless the diet is vegan). If an ingredient violates the diet, suggest "
+            "a swap that keeps the requested diet. For gluten-free, avoid wheat-based buns, wraps, "
+            "and pasta unless labeled gluten-free. For keto, avoid high-carb items (buns, fries, "
+            "sugary sauces) and suggest low-carb swaps. Return strict JSON with keys: recipes "
+            "(array of objects with name, time_minutes, ingredients, steps, swaps), shopping_list "
+            "(array of strings), and tips (array of strings)."
         )
 
         user_content = (
