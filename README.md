@@ -9,6 +9,9 @@ NourishBot is a multi-agent system that analyzes food images, estimates nutritio
 - Health agent provides a short evaluation and tips.
 - Two workflows: **Analysis** or **Recipe**.
 
+### Live Demo
+- https://nutritionbot-53iy.onrender.com/
+
 ### Setup
 1. Create a `.env` file in the project root with:
 	- `GROQ_API=your_api_key`
